@@ -4,18 +4,21 @@
 
 ## Purpose
 
-The purpose of this project is to give Taos Bootcampers the opportunity to work with many different concepts and technologies. This project will use Amazon's AWS as its cloud provider though the primary concepts are easily transferable to any Cloud provider.
+The purpose of this project is to give Taos Bootcampers the opportunity to work with many different concepts and technologies. This project will use Amazon Web Services (AWS) as its cloud provider though the primary concepts are easily transferable to any Cloud provider.
 
-In this project you will implement a simple Kubernetes cluster running a simple web application. The webserver will run Nginx. A Jenkins server will be used to set up and orchestrate the deploment of the cluster at scale.
+In this project you will implement a simple Kubernetes cluster running a simple web application (Python Flask). The webserver will run Nginx. A Jenkins server will be used to set up and orchestrate the deployment of the cluster at scale. Docker will be used for the containers
 
 
 
-## Prompt and Answers
+## Prompt
 
 ### Week 1
 Our goal is to learn more about setting up and deploying a Kubernetes cluster running Jenkins on EC2. This will be done using a tool called `kops` by creating one pod running three free-tier nodes.
 
-#### 1.0: Get on AWS and create a developer (dev) server
+#### 1.0: AWS dev Server
+
+> Go to the AWS website and create yourself a developer (dev) server. You do not have to spin up anything that is fancy, just something that will allow you to compartmentalize development for this project.
+
 - [ ] Create an AWS account
 - [ ] Create a dev server
 ..- [ ] Launch an EC2 instance
@@ -59,6 +62,8 @@ https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/CreatingNewSubdomain.h
 
 
 #### 1.3: Deploy and Configure Jenkins
+* You can use this for reference; however, to get the most out of this exercise, you should architect for the free tier, and come up with your own configuration: https://github.com/kumorilabs/getting-to-know-k8s/tree/master/kubernetes/jenkins
+
     • Deploy and Configure Jenkins [2]
     • Create a Route53 domain for Jenkins and unlock the Jenkins server
     • Retrieve the admin password from /var/jenkins_home /secrets/initialAdminPassword
@@ -66,4 +71,3 @@ https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/CreatingNewSubdomain.h
     • Change the admin password to something you’ll remember
     • Install and configure the Kubernetes Jenkins plugin
 
-[2] You can use this for reference; however, to get the most out of this exercise, you should architect for the free tier, and come up with your own configuration: https://github.com/kumorilabs/getting-to-know-k8s/tree/master/kubernetes/jenkins
