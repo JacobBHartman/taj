@@ -26,11 +26,9 @@ Our goal is to learn more about setting up and deploying a Kubernetes cluster ru
 ..- [ ] Select t2.micro instance type
 ..- [ ] Continue with setup
 
-#### 1.1: Setup a VPC in AWS.
-Try to do this without using the setup wizard. There are a bunch of pieces thats the wizard does without telling you. Setting up manually will help you to learn about the various components needed for a VPC to work. Msot of these are components that only need to be set up once for the lifetime of the VPC, so you probably won't encounter them often but knowing about them can help with troubleshooting later on.
+#### 1.1: AWS VPC
 
-Setting up a VPC in AWS was another project in the Taos curriculum. Contact staff for details.
-
+> Setup a VPC in AWS. Try to do this without using the setup wizard. There are a bunch of pieces thats the wizard does without telling you. Setting up manually will help you to learn about the various components needed for a VPC to work. Msot of these are components that only need to be set up once for the lifetime of the VPC, so you probably won't encounter them often but knowing about them can help with troubleshooting later on. Setting up a VPC in AWS was another project in the Taos curriculum. Contact staff for details.
 
 * Go to AWS VPC Dashboard
 * Click "VPC's" under resources
@@ -61,13 +59,16 @@ https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/CreatingNewSubdomain.h
 
 
 
-#### 1.3: Deploy and Configure Jenkins
-* You can use this for reference; however, to get the most out of this exercise, you should architect for the free tier, and come up with your own configuration: https://github.com/kumorilabs/getting-to-know-k8s/tree/master/kubernetes/jenkins
+#### 1.3: Initialize Jenkins
 
-    • Deploy and Configure Jenkins [2]
-    • Create a Route53 domain for Jenkins and unlock the Jenkins server
-    • Retrieve the admin password from /var/jenkins_home /secrets/initialAdminPassword
-    • Install the suggested plugins
-    • Change the admin password to something you’ll remember
-    • Install and configure the Kubernetes Jenkins plugin
+> Deploy and configure Jenkins
+
+* [A git repo containing configuration files for Jenkins in YAML](https://github.com/kumorilabs/getting-to-know-k8s/tree/master/kubernetes/jenkins)
+..* You can use this for reference; however, to get the most out of this exercise, you should architect for the free tier, and come up with your own configuration
+
+- [ ] Create a Route53 domain for Jenkins and unlock the Jenkins server
+- [ ] Retrieve the admin password from /var/jenkins_home /secrets/initialAdminPassword
+- [ ] Install the suggested plugins
+- [ ] Change the admin password to something you’ll remember
+- [ ] Install and configure the Kubernetes Jenkins plugin
 
