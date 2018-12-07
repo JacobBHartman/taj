@@ -57,8 +57,6 @@ https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/CreatingNewSubdomain.h
     • Build the cluster configuration
 * Create the cluster
 
-
-
 #### 1.3: Initialize Jenkins
 
 > Deploy and configure Jenkins
@@ -71,4 +69,9 @@ https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/CreatingNewSubdomain.h
 - [ ] Install the suggested plugins
 - [ ] Change the admin password to something you’ll remember
 - [ ] Install and configure the Kubernetes Jenkins plugin
+
+### Week 2
+
+This week's project will focus on customizing your Jenkins deployment as well as Dockerizing the image.
+
 
