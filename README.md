@@ -1,7 +1,6 @@
 # A Taos AWS+Jenkins (TAJ) project
 
 
-
 ## Purpose
 
 The purpose of this project is to give Taos Bootcampers the opportunity to work with many different concepts and technologies. This project will use Amazon Web Services (AWS) as its cloud provider though the primary concepts are easily transferable to any Cloud provider.
@@ -9,13 +8,17 @@ The purpose of this project is to give Taos Bootcampers the opportunity to work 
 In this project you will implement a simple Kubernetes cluster running a simple web application (Python Flask). The webserver will run Nginx. A Jenkins server will be used to set up and orchestrate the deployment of the cluster at scale. Docker will be used for the containers
 
 
-
 ## Prompt
 
 ### Week 1
+
 Our goal is to learn more about setting up and deploying a Kubernetes cluster running Jenkins on EC2. This will be done using a tool called `kops` by creating one pod running three free-tier nodes.
 
-> Go to the AWS website and create yourself a developer (dev) server. You do not have to spin up anything that is fancy, just something that will allow you to compartmentalize development for this project.
+We will want our architecture to be within a VPC for security and performance reasons. Within that VPC we will include a developer (dev) server that the engineer can use to freely engineer without fear of affecting their physical machine. We will setup the Kubernetes cluster on top of which we will build our application. Before we build our application we will setup a container running Jenkins that will allow us to leverage Continuous Delivery (CD).
+
+---
+
+> Go to the AWS website and create yourself a dev server. You do not have to spin up anything that is fancy, just something that will allow you to compartmentalize development for this project.
 
 - [ ] Create an AWS account
 - [ ] Create a dev server
@@ -23,6 +26,8 @@ Our goal is to learn more about setting up and deploying a Kubernetes cluster ru
 ..- [ ] Select Amazon Linux 2 AMI
 ..- [ ] Select t2.micro instance type
 ..- [ ] Continue with setup
+
+---
 
 > Setup a VPC in AWS. Try to do this without using the setup wizard. There are a bunch of pieces thats the wizard does without telling you. Setting up manually will help you to learn about the various components needed for a VPC to work. Msot of these are components that only need to be set up once for the lifetime of the VPC, so you probably won't encounter them often but knowing about them can help with troubleshooting later on. Setting up a VPC in AWS was another project in the Taos curriculum. Contact staff for details.
 
@@ -35,6 +40,8 @@ Our goal is to learn more about setting up and deploying a Kubernetes cluster ru
 * Configure DHCP options
 * ACL
 * Security groups
+
+---
 
 > Create a Kubernetes cluster in AWS
 
@@ -52,7 +59,7 @@ https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/CreatingNewSubdomain.h
 - [ ] Build the cluster configuration
 - [ ] Create the cluster
 
-#### 1.3: Initialize Jenkins
+---
 
 > Deploy and configure Jenkins
 
@@ -64,6 +71,10 @@ https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/CreatingNewSubdomain.h
 - [ ] Install the suggested plugins
 - [ ] Change the admin password to something you’ll remember
 - [ ] Install and configure the Kubernetes Jenkins plugin
+
+
+---
+
 
 ### Week 2
 
